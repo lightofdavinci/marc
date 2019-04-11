@@ -17,7 +17,7 @@ RUN \
 FROM alpine:latest 
 RUN adduser ioq3srv -D
 COPY --from=builder /root/ioquake3 /home/ioq3srv/ioquake3
-RUN ln -s /pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3
+RUN ln -s /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3
 USER ioq3srv
 EXPOSE 27960/udp
 ENTRYPOINT ["/home/ioq3srv/ioquake3/ioq3ded.x86_64"]
