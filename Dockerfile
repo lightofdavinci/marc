@@ -1,5 +1,6 @@
 FROM arm32v6/alpine
 
+COPY ./qemu-arm-static /usr/bin/qemu-arm-static
 RUN apk --no-cache add curl g++ gcc git make
 RUN mkdir -p /tmp/build
 RUN curl https://raw.githubusercontent.com/ioquake/ioq3/master/misc/linux/server_compile.sh -o /tmp/build/compile.sh
