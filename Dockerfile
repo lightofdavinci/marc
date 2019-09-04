@@ -13,10 +13,10 @@ LABEL maintainer="wouterds <wouter.de.schuyter@gmail.com>"
 
 COPY --from=0 /root/ioquake3 /home/ioq3srv/ioquake3
 RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3 && \
-  ln -sf /data/my-server.cfg /home/ioq3srv/ioquake3/baseq3/my-server.cfg && \
+  ln -sf /data/server.cfg /home/ioq3srv/ioquake3/baseq3/server.cfg && \
   adduser ioq3srv -D
 
 USER ioq3srv
 EXPOSE 27960
 
-ENTRYPOINT ["/home/ioq3srv/ioquake3/ioq3ded.x86_64", "+exec", "my-server.cfg"]
+ENTRYPOINT ["/home/ioq3srv/ioquake3/ioq3ded.x86_64", "+exec", "server.cfg"]
