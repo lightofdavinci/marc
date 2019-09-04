@@ -10,10 +10,13 @@ RUN unzip /tmp/build/quake3-latest-pk3s.zip -d /tmp/build/
 RUN cp -r /tmp/build/quake3-latest-pk3s/* ~/ioquake3
 
 FROM alpine
-RUN adduser ioq3srv -D
+
 COPY --from=0 /root/ioquake3 /home/ioq3srv/ioquake3
-RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3
-RUN ln -sf /data/my-server.cfg /home/ioq3srv/ioquake3/baseq3/my-server.cfg
+RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3 && \
+  ln -sf /data/my-server.cfg /home/ioq3srv/ioquake3/baseq3/my-server.cfg && \
+  adduser ioq3srv -D
+
 USER ioq3srv
 EXPOSE 27960/udp
+
 ENTRYPOINT ["/home/ioq3srv/ioquake3/ioq3ded.x86_64", "+exec", "my-server.cfg"]
