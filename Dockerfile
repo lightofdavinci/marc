@@ -12,10 +12,12 @@ RUN cp -r /tmp/build/quake3-latest-pk3s/* ~/ioquake3
 FROM arm32v6/alpine
 LABEL maintainer="wouterds <wouter.de.schuyter@gmail.com>"
 
+COPY ./qemu-arm-static /usr/bin/qemu-arm-static
 COPY --from=0 /root/ioquake3 /home/ioq3srv/ioquake3
 RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3 && \
   ln -sf /data/server.cfg /home/ioq3srv/ioquake3/baseq3/server.cfg && \
-  adduser ioq3srv -D
+  adduser ioq3srv -D && \
+  rm /usr/bin/qemu-arm-static
 
 USER ioq3srv
 EXPOSE 27960
