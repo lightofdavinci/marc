@@ -1,5 +1,4 @@
 FROM alpine
-LABEL maintainer="wouterds <wouter.de.schuyter@gmail.com>"
 
 RUN apk --no-cache add curl g++ gcc git make
 RUN mkdir -p /tmp/build
@@ -10,6 +9,7 @@ RUN unzip /tmp/build/quake3-latest-pk3s.zip -d /tmp/build/
 RUN cp -r /tmp/build/quake3-latest-pk3s/* ~/ioquake3
 
 FROM alpine
+LABEL maintainer="wouterds <wouter.de.schuyter@gmail.com>"
 
 COPY --from=0 /root/ioquake3 /home/ioq3srv/ioquake3
 RUN ln -sf /data/pak0.pk3 /home/ioq3srv/ioquake3/baseq3/pak0.pk3 && \
