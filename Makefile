@@ -22,8 +22,10 @@ build: qemu-arm-static ./Dockerfile
 tag: build
 	docker tag $(TAG) $(TAG):$(VERSION)
 
-push: tag
+push-version: tag
 	docker push $(TAG):$(VERSION)
 
-push-latest: push
+push-latest: tag
 	docker push $(TAG):latest
+
+push: push-version push-latest
