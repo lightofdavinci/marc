@@ -8,5 +8,5 @@ services:
       - ./pak0.pk3:/data/pak0.pk3
       - ./server.cfg:/data/server.cfg
     ports:
-      - '27960:27960'
+      - '27960:27960/udp'
     mem_limit: 64mb
