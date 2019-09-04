@@ -13,3 +13,7 @@ This image provides a simple quake3 dedicated server that runs on Raspberry Pi.
 4. Copy the **pak0.pk3** file into the directory.
 
 5. Run `docker-compose up -d`.
+
+## Client
+
+Find a client for your platform here: https://ioquake3.org/get-it/.
