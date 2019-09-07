@@ -26,8 +26,7 @@ curl -sSL https://github.com/wouterds/rpi-quake3-server/raw/master/install.sh | 
 
 ### Configuring
 
-Change server settings by editing `./server.cfg`.<br />
-The changes will take effect once you restart the container with `docker-compose restart`.
+Change server settings by editing `./server.cfg`
 
 ## Client
 
