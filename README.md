@@ -4,7 +4,7 @@ This Docker image provides a simple Quake 3 dedicated server that runs on Raspbe
 
 [![Quake 3 on Raspberry with Docker](https://wouterdeschuyter.be/static/media/955edb89-677f-4cb5-bea0-8491f9223175.jpeg)](https://wouterdeschuyter.be/blog/running-a-dedicated-quake-3-arena-server-on-raspberry-pi-with-docker)
 
-## Install
+## Installing
 
 ### With script
 
@@ -22,11 +22,16 @@ curl -sSL https://github.com/wouterds/rpi-quake3-server/raw/master/install.sh | 
 
 4. Copy the [pak0.pk3](https://github.com/wouterds/rpi-quake3-server/releases/download/1.0.0/pak0.pk3) file into the directory
 
-5. Run `docker-compose up -d`
 
 ### Configuring
 
 Change server settings by editing `./server.cfg`
+
+## Running
+
+```bash
+docker-compose up -d
+```
 
 ## Client
 
