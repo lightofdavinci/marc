@@ -2,7 +2,7 @@
 
 This Docker image provides a simple Quake 3 dedicated server that runs on Raspberry Pi.
 
-[![Quake 3 on Raspberry with Docker](https://wouterdeschuyter.be/static/media/955edb89-677f-4cb5-bea0-8491f9223175.jpeg)](https://wouterdeschuyter.be/blog/running-a-dedicated-quake-3-arena-server-on-raspberry-pi-with-docker)
+[![Quake 3 on Raspberry with Docker](https://wouterdeschuyter.be/static/media/2fc444b5-e80e-49bb-85ef-71c3023e0e88.jpg)](https://wouterdeschuyter.be/blog/running-a-dedicated-quake-3-arena-server-on-raspberry-pi-with-docker)
 
 ## Installing
 
