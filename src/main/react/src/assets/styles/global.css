@@ -1,0 +1,22 @@
+:root {
+  font-family: "Open Sans", "Helvetica Neue", Inter, system-ui, Avenir, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #191919;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1600px;
+  margin: 0 auto;
+}
